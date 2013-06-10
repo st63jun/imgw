@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Jid:</strong>
+  <%= @xmpp_account.jid %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @xmpp_account.password %>
+</p>
+
+<p>
+  <strong>Port:</strong>
+  <%= @xmpp_account.port %>
+</p>
+
+<p>
+  <strong>Use ssl:</strong>
+  <%= @xmpp_account.use_ssl %>
+</p>
+
+<%= link_to 'Edit', edit_xmpp_accounts_path %>
+

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  jid: MyString
+  password: MyString
+  port: 1
+  use_ssl: false
+
+two:
+  jid: MyString
+  password: MyString
+  port: 1
+  use_ssl: false

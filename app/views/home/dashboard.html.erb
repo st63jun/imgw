@@ -1,0 +1,16 @@
+<h1>Home#dashboard</h1>
+<p id="notice"><%= notice %></p>
+<h3>Your authentication code</h3>
+<p><%= current_user.authentication_token %></p>
+<p><%= link_to "Reset Token", :reset_token %></p>
+<h3>Registrated XMPP Account</h3>
+<p>
+  <% if current_user.xmpp_account %>
+  <%= current_user.xmpp_account.jid %>
+  <%= link_to "Edit", edit_xmpp_accounts_path %>
+  <%= link_to "Delete", destroy_xmpp_accounts_path, method: :delete %>
+  <% else %>
+  <%= link_to "Register Your XMPP Account", new_xmpp_accounts_path %>
+  <% end %>
+</p>
+<p><%= link_to "Sign out", destroy_user_session_path, method: :delete %></p>

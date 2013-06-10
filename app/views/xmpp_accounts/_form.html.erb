@@ -1,0 +1,33 @@
+<%= form_for(@xmpp_account, url: xmpp_accounts_path) do |f| %>
+  <% if @xmpp_account.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@xmpp_account.errors.count, "error") %> prohibited this xmpp_account from being saved:</h2>
+
+      <ul>
+      <% @xmpp_account.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :jid %><br>
+    <%= f.text_field :jid %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :port %><br>
+    <%= f.number_field :port %>
+  </div>
+  <div class="field">
+    <%= f.label :use_ssl %><br>
+    <%= f.check_box :use_ssl %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
